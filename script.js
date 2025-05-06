@@ -37,7 +37,7 @@ let time = Date.now();
 
 // Animation
 
-const animationLoop = () => {
+const tick = () => {
   // Time: this will help to normalise the speed of the animation
   // regardless of the framerate
   const currentTime = Date.now();
@@ -50,7 +50,7 @@ const animationLoop = () => {
   // Renderer
   renderer.render(scene, camera);
 
-  window.requestAnimationFrame(animationLoop);
+  window.requestAnimationFrame(tick);
 };
 
-animationLoop();
+tick();
